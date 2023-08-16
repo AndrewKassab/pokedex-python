@@ -1,3 +1,5 @@
 from django.contrib import admin
+from pokemon.models import PokemonType, Pokemon
 
-# Register your models here.
+admin.site.register(PokemonType)
+admin.site.register(Pokemon)
