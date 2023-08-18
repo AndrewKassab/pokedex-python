@@ -9,14 +9,15 @@ class PokemonTypeSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+# TODO: Type is currently case sensitive
 class PokemonSerializer(serializers.ModelSerializer):
-    weaknesses = serializers.ListSerializer(child=PokemonTypeSerializer(), source='weaknesses')
-    type_primary = serializers.PrimaryKeyRelatedField(queryset=PokemonType.objects.all())
-    type_secondary = serializers.PrimaryKeyRelatedField(queryset=PokemonType.objects.all(), required=False)
+    weaknesses = serializers.ListSerializer(child=PokemonTypeSerializer())
+    primary_type = serializers.PrimaryKeyRelatedField(queryset=PokemonType.objects.all())
+    secondary_type = serializers.PrimaryKeyRelatedField(queryset=PokemonType.objects.all(), required=False, allow_null=True)
 
     class Meta:
         model = Pokemon
-        fields = ('__all__', 'weaknesses')
+        fields = ('id', 'name', 'primary_type', 'secondary_type', 'created_date', 'updated_date', 'weaknesses')
         read_only_fields = ['created_date', 'updated_date']
 
 

@@ -1,0 +1,247 @@
+[
+{
+  "model": "pokemon.pokemontype",
+  "pk": "Bug",
+  "fields": {
+    "color": "#A8B820",
+    "weak_against": [
+      "Fire",
+      "Flying",
+      "Rock"
+    ],
+    "immune_against": []
+  }
+},
+{
+  "model": "pokemon.pokemontype",
+  "pk": "Dark",
+  "fields": {
+    "color": "#705848",
+    "weak_against": [
+      "Bug",
+      "Fairy",
+      "Fighting"
+    ],
+    "immune_against": [
+      "Psychic"
+    ]
+  }
+},
+{
+  "model": "pokemon.pokemontype",
+  "pk": "Dragon",
+  "fields": {
+    "color": "#7038F8",
+    "weak_against": [
+      "Dragon",
+      "Fairy",
+      "Ice"
+    ],
+    "immune_against": []
+  }
+},
+{
+  "model": "pokemon.pokemontype",
+  "pk": "Electric",
+  "fields": {
+    "color": "#F8D030",
+    "weak_against": [
+      "Ground"
+    ],
+    "immune_against": []
+  }
+},
+{
+  "model": "pokemon.pokemontype",
+  "pk": "Fairy",
+  "fields": {
+    "color": "#EE99AC",
+    "weak_against": [
+      "Poison",
+      "Steel"
+    ],
+    "immune_against": [
+      "Dragon"
+    ]
+  }
+},
+{
+  "model": "pokemon.pokemontype",
+  "pk": "Fighting",
+  "fields": {
+    "color": "#C03028",
+    "weak_against": [
+      "Fairy",
+      "Flying",
+      "Psychic"
+    ],
+    "immune_against": []
+  }
+},
+{
+  "model": "pokemon.pokemontype",
+  "pk": "Fire",
+  "fields": {
+    "color": "#F08030",
+    "weak_against": [
+      "Ground",
+      "Rock",
+      "Water"
+    ],
+    "immune_against": []
+  }
+},
+{
+  "model": "pokemon.pokemontype",
+  "pk": "Flying",
+  "fields": {
+    "color": "#A890F0",
+    "weak_against": [
+      "Electric",
+      "Ice",
+      "Rock"
+    ],
+    "immune_against": [
+      "Ground"
+    ]
+  }
+},
+{
+  "model": "pokemon.pokemontype",
+  "pk": "Ghost",
+  "fields": {
+    "color": "#705898",
+    "weak_against": [
+      "Dark",
+      "Ghost"
+    ],
+    "immune_against": [
+      "Fighting",
+      "Normal"
+    ]
+  }
+},
+{
+  "model": "pokemon.pokemontype",
+  "pk": "Grass",
+  "fields": {
+    "color": "#78C850",
+    "weak_against": [
+      "Fire",
+      "Flying",
+      "Ice",
+      "Poison"
+    ],
+    "immune_against": []
+  }
+},
+{
+  "model": "pokemon.pokemontype",
+  "pk": "Ground",
+  "fields": {
+    "color": "#E0C068",
+    "weak_against": [
+      "Grass",
+      "Ice",
+      "Water"
+    ],
+    "immune_against": [
+      "Electric"
+    ]
+  }
+},
+{
+  "model": "pokemon.pokemontype",
+  "pk": "Ice",
+  "fields": {
+    "color": "#98D8D8",
+    "weak_against": [
+      "Fighting",
+      "Fire",
+      "Rock",
+      "Steel"
+    ],
+    "immune_against": []
+  }
+},
+{
+  "model": "pokemon.pokemontype",
+  "pk": "Normal",
+  "fields": {
+    "color": "#A8A878",
+    "weak_against": [
+      "Fighting"
+    ],
+    "immune_against": [
+      "Ghost"
+    ]
+  }
+},
+{
+  "model": "pokemon.pokemontype",
+  "pk": "Poison",
+  "fields": {
+    "color": "#A040A0",
+    "weak_against": [
+      "Ground",
+      "Psychic"
+    ],
+    "immune_against": []
+  }
+},
+{
+  "model": "pokemon.pokemontype",
+  "pk": "Psychic",
+  "fields": {
+    "color": "#F85888",
+    "weak_against": [
+      "Bug",
+      "Dark",
+      "Ghost"
+    ],
+    "immune_against": []
+  }
+},
+{
+  "model": "pokemon.pokemontype",
+  "pk": "Rock",
+  "fields": {
+    "color": "#B8A038",
+    "weak_against": [
+      "Fighting",
+      "Grass",
+      "Ground",
+      "Steel",
+      "Water"
+    ],
+    "immune_against": []
+  }
+},
+{
+  "model": "pokemon.pokemontype",
+  "pk": "Steel",
+  "fields": {
+    "color": "#B8B8D0",
+    "weak_against": [
+      "Fighting",
+      "Fire",
+      "Ground"
+    ],
+    "immune_against": [
+      "Poison"
+    ]
+  }
+},
+{
+  "model": "pokemon.pokemontype",
+  "pk": "Water",
+  "fields": {
+    "color": "#6890F0",
+    "weak_against": [
+      "Electric",
+      "Grass"
+    ],
+    "immune_against": []
+  }
+}
+]

@@ -26,13 +26,13 @@ class Pokemon(models.Model):
 
     @property
     def weaknesses(self):
-        primary_type_weaknesses = set(self.type_primary.weak_against.all())
-        secondary_type_weaknesses = set(self.type_secondary.weak_against.all()) if self.type_secondary else set()
+        primary_type_weaknesses = set(self.primary_type.weak_against.all())
+        secondary_type_weaknesses = set(self.secondary_type.weak_against.all()) if self.secondary_type else set()
 
         total_weaknesses = primary_type_weaknesses | secondary_type_weaknesses
 
-        primary_type_immunities = set(self.type_primary.immune_to.all())
-        secondary_type_immunities = set(self.type_secondary.immune_to.all()) if self.type_secondary else set()
+        primary_type_immunities = set(self.primary_type.immune_against.all())
+        secondary_type_immunities = set(self.secondary_type.immune_against.all()) if self.secondary_type else set()
 
         total_immunities = primary_type_immunities | secondary_type_immunities
 
