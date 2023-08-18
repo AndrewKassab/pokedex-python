@@ -1,5 +1,5 @@
+from django.core.validators import RegexValidator
 from django.db import models
-from enum import Enum
 
 color_regex = RegexValidator(
     regex=r'^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$',
@@ -7,7 +7,7 @@ color_regex = RegexValidator(
 )
 
 class PokemonType(models.Model):
-    name = models.CharField(max_length=15, unique=True)
+    name = models.CharField(max_length=20, primary_key = True)
     color = models.CharField(max_length=7, validators=[color_regex])
     weak_against = models.ManyToManyField('self', related_name='+', blank=True, symmetrical=False)
     immune_against = models.ManyToManyField('self', related_name='+', blank=True, symmetrical=False)
@@ -19,8 +19,8 @@ class PokemonType(models.Model):
 class Pokemon(models.Model):
     id = models.IntegerField(primary_key=True, auto_created=False, blank=False)
     name = models.CharField(max_length=30, unique=True)
-    primary_type = models.CharField(max_length=15, choices=[(pokemonType.value, pokemonType.name) for pokemonType in PokemonType])
-    secondary_type = models.CharField(max_length=15, choices=[(pokemonType.value, pokemonType.name) for pokemonType in PokemonType], blank = True, null = True)
+    primary_type = models.ForeignKey('PokemonType', related_name='+', on_delete=models.CASCADE)
+    secondary_type = models.ForeignKey('PokemonType', related_name='+', on_delete=models.CASCADE, blank=True, null=True)
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
 
