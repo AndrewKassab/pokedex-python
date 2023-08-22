@@ -20,6 +20,5 @@ from pokemon import urls as pokemon_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('pokemon/', include(pokemon_urls)),
-    path('pokedex', include(pokemon_urls))
+    path('api/', include(pokemon_urls))
 ]

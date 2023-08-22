@@ -3,7 +3,7 @@ from django.urls import path, include
 from pokemon.views.pokemonapiview import PokemonViewSet
 
 router = DefaultRouter()
-router.register(r'api', PokemonViewSet)
+router.register(r'', PokemonViewSet)
 
 app_name = 'pokemon'
 
