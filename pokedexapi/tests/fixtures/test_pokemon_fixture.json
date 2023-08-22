@@ -1,6 +1,6 @@
 [
     {
-        "model": "pokemon.pokemon",
+        "model": "pokedexapi.pokemon",
         "pk": 4,
         "fields": {
             "name": "Charmander",
@@ -11,7 +11,7 @@
         }
     },
     {
-        "model": "pokemon.pokemon",
+        "model": "pokedexapi.pokemon",
         "pk": 7,
         "fields": {
             "name": "Squirtle",
@@ -22,7 +22,7 @@
         }
     },
     {
-        "model": "pokemon.pokemon",
+        "model": "pokedexapi.pokemon",
         "pk": 1,
         "fields": {
             "name": "Bulbasaur",
@@ -33,7 +33,7 @@
         }
     },
     {
-        "model": "pokemon.pokemon",
+        "model": "pokedexapi.pokemon",
         "pk": 6,
         "fields": {
             "name": "Charizard",

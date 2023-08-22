@@ -2,7 +2,7 @@ from django.core.management import call_command
 from rest_framework.test import APITestCase
 from rest_framework import status
 
-POKEMON_VIEW_ENDPOINT = '/pokemon/api/'
+POKEMON_VIEW_ENDPOINT = '/api/'
 POKEMON_VIEW_ID_ENDPOINT = POKEMON_VIEW_ENDPOINT + "{id}/"
 
 # Create your tests here.

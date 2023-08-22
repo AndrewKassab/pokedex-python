@@ -1,6 +1,6 @@
 [
 {
-  "model": "pokemon.pokemontype",
+  "model": "pokedexapi.pokemontype",
   "pk": "Bug",
   "fields": {
     "color": "#A8B820",
@@ -13,7 +13,7 @@
   }
 },
 {
-  "model": "pokemon.pokemontype",
+  "model": "pokedexapi.pokemontype",
   "pk": "Dark",
   "fields": {
     "color": "#705848",
@@ -28,7 +28,7 @@
   }
 },
 {
-  "model": "pokemon.pokemontype",
+  "model": "pokedexapi.pokemontype",
   "pk": "Dragon",
   "fields": {
     "color": "#7038F8",
@@ -41,7 +41,7 @@
   }
 },
 {
-  "model": "pokemon.pokemontype",
+  "model": "pokedexapi.pokemontype",
   "pk": "Electric",
   "fields": {
     "color": "#F8D030",
@@ -52,7 +52,7 @@
   }
 },
 {
-  "model": "pokemon.pokemontype",
+  "model": "pokedexapi.pokemontype",
   "pk": "Fairy",
   "fields": {
     "color": "#EE99AC",
@@ -66,7 +66,7 @@
   }
 },
 {
-  "model": "pokemon.pokemontype",
+  "model": "pokedexapi.pokemontype",
   "pk": "Fighting",
   "fields": {
     "color": "#C03028",
@@ -79,7 +79,7 @@
   }
 },
 {
-  "model": "pokemon.pokemontype",
+  "model": "pokedexapi.pokemontype",
   "pk": "Fire",
   "fields": {
     "color": "#F08030",
@@ -92,7 +92,7 @@
   }
 },
 {
-  "model": "pokemon.pokemontype",
+  "model": "pokedexapi.pokemontype",
   "pk": "Flying",
   "fields": {
     "color": "#A890F0",
@@ -107,7 +107,7 @@
   }
 },
 {
-  "model": "pokemon.pokemontype",
+  "model": "pokedexapi.pokemontype",
   "pk": "Ghost",
   "fields": {
     "color": "#705898",
@@ -122,7 +122,7 @@
   }
 },
 {
-  "model": "pokemon.pokemontype",
+  "model": "pokedexapi.pokemontype",
   "pk": "Grass",
   "fields": {
     "color": "#78C850",
@@ -136,7 +136,7 @@
   }
 },
 {
-  "model": "pokemon.pokemontype",
+  "model": "pokedexapi.pokemontype",
   "pk": "Ground",
   "fields": {
     "color": "#E0C068",
@@ -151,7 +151,7 @@
   }
 },
 {
-  "model": "pokemon.pokemontype",
+  "model": "pokedexapi.pokemontype",
   "pk": "Ice",
   "fields": {
     "color": "#98D8D8",
@@ -165,7 +165,7 @@
   }
 },
 {
-  "model": "pokemon.pokemontype",
+  "model": "pokedexapi.pokemontype",
   "pk": "Normal",
   "fields": {
     "color": "#A8A878",
@@ -178,7 +178,7 @@
   }
 },
 {
-  "model": "pokemon.pokemontype",
+  "model": "pokedexapi.pokemontype",
   "pk": "Poison",
   "fields": {
     "color": "#A040A0",
@@ -190,7 +190,7 @@
   }
 },
 {
-  "model": "pokemon.pokemontype",
+  "model": "pokedexapi.pokemontype",
   "pk": "Psychic",
   "fields": {
     "color": "#F85888",
@@ -203,7 +203,7 @@
   }
 },
 {
-  "model": "pokemon.pokemontype",
+  "model": "pokedexapi.pokemontype",
   "pk": "Rock",
   "fields": {
     "color": "#B8A038",
@@ -218,7 +218,7 @@
   }
 },
 {
-  "model": "pokemon.pokemontype",
+  "model": "pokedexapi.pokemontype",
   "pk": "Steel",
   "fields": {
     "color": "#B8B8D0",
@@ -233,7 +233,7 @@
   }
 },
 {
-  "model": "pokemon.pokemontype",
+  "model": "pokedexapi.pokemontype",
   "pk": "Water",
   "fields": {
     "color": "#6890F0",

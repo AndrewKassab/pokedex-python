@@ -1,8 +1,8 @@
 from rest_framework import viewsets, mixins, status
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
-from pokemon.models import Pokemon
-from pokemon.serializers import PokemonSerializer
+from pokedexapi.models import Pokemon
+from pokedexapi.serializers import PokemonSerializer
 
 class PokemonViewSet(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.CreateModelMixin):
 

@@ -1,11 +1,11 @@
 from rest_framework.routers import DefaultRouter
 from django.urls import path, include
-from pokemon.views.pokemonapiview import PokemonViewSet
+from pokedexapi.views.pokedexapiview import PokemonViewSet
 
 router = DefaultRouter()
 router.register(r'', PokemonViewSet)
 
-app_name = 'pokemon'
+app_name = 'pokedexapi'
 
 urlpatterns = [
     path('', include(router.urls))
