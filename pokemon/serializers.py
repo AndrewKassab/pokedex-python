@@ -11,7 +11,7 @@ class PokemonTypeSerializer(serializers.ModelSerializer):
 
 # TODO: Type is currently case sensitive
 class PokemonSerializer(serializers.ModelSerializer):
-    weaknesses = serializers.ListSerializer(child=PokemonTypeSerializer())
+    weaknesses = serializers.ListSerializer(child=PokemonTypeSerializer(), required = False)
     primary_type = serializers.PrimaryKeyRelatedField(queryset=PokemonType.objects.all())
     secondary_type = serializers.PrimaryKeyRelatedField(queryset=PokemonType.objects.all(), required=False, allow_null=True)
 

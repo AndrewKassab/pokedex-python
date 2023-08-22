@@ -9,6 +9,12 @@ class PokemonListApiView(APIView):
 
     def get(self, request):
         pokemon = Pokemon.objects.all()
+
+        type = request.query_params.get('type', None)
+
+        if type:
+            pokemon = pokemon.filter(primary_type=type) | pokemon.filter(secondary_type=type)
+
         serializer = PokemonSerializer(pokemon, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
@@ -41,7 +47,7 @@ class PokemonDetailApiView(APIView):
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def delete(self, pk):
+    def delete(self, request, pk):
         pokemon = self.get_object(pk)
         pokemon.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
