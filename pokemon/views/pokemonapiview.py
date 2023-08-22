@@ -1,53 +1,37 @@
-from rest_framework.views import APIView
+from rest_framework import viewsets, mixins, status
 from rest_framework.response import Response
-from rest_framework import status
-from django.http import Http404
+from django.shortcuts import get_object_or_404
 from pokemon.models import Pokemon
 from pokemon.serializers import PokemonSerializer
 
-class PokemonListApiView(APIView):
+class PokemonViewSet(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.CreateModelMixin):
 
-    def get(self, request):
-        pokemon = Pokemon.objects.all()
+    queryset = Pokemon.objects.all()
+    serializer_class = PokemonSerializer
 
-        type = request.query_params.get('type', None)
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        type = self.request.query_params.get('type', None)
 
         if type:
-            pokemon = pokemon.filter(primary_type=type) | pokemon.filter(secondary_type=type)
+            queryset = queryset.filter(primary_type=type) | queryset.filter(secondary_type=type)
 
-        serializer = PokemonSerializer(pokemon, many=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        return queryset
 
-    def post(self, request):
-        serializer = PokemonSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-class PokemonDetailApiView(APIView):
-
-    def get_object(self, pk):
-        try:
-            return Pokemon.objects.get(pk=pk)
-        except Pokemon.DoesNotExist:
-            raise Http404
-
-    def get(self, request, pk):
-        pokemon = self.get_object(pk)
-        serializer = PokemonSerializer(pokemon)
+    def retrieve(self, *args, **kwargs):
+        instance = get_object_or_404(Pokemon, pk=kwargs['pk'])
+        serializer = self.get_serializer(instance)
         return Response(serializer.data)
 
-    def put(self, request, pk):
-        pokemon = self.get_object(pk)
-        serializer = PokemonSerializer(pokemon, data=request.data)
+    def update(self, *args, **kwargs):
+        instance = get_object_or_404(Pokemon, pk=kwargs['pk'])
+        serializer = self.get_serializer(instance, data=self.request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def delete(self, request, pk):
-        pokemon = self.get_object(pk)
-        pokemon.delete()
+    def destroy(self, *args, **kwargs):
+        instance = get_object_or_404(Pokemon, pk=kwargs['pk'])
+        instance.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)

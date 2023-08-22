@@ -1,8 +1,12 @@
-from django.urls import path
-from pokemon.views.pokemonapiview import PokemonListApiView, PokemonDetailApiView
+from rest_framework.routers import DefaultRouter
+from django.urls import path, include
+from pokemon.views.pokemonapiview import PokemonViewSet
+
+router = DefaultRouter()
+router.register(r'api', PokemonViewSet)
 
 app_name = 'pokemon'
+
 urlpatterns = [
-    path('api/', PokemonListApiView.as_view(), name='pokemon'),
-    path('api/<int:pk>/', PokemonDetailApiView.as_view(), name='pokemon-detail')
+    path('', include(router.urls))
 ]
