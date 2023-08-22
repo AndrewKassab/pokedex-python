@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from pokedexapi import urls as pokemon_urls
+from pokedexapi import urls as pokedexapi_urls
+from pokedexweb import urls as pokedexweb_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(pokemon_urls))
+    path('api/', include(pokedexapi_urls)),
+    path('', include(pokedexweb_urls))
 ]
